@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Groq Extension</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- TOP TABS -->
+    <nav class="tab-nav">
+      <button class="tab-btn active" data-tab="home">Home</button>
+      <button class="tab-btn" data-tab="chat">Chatbot</button>
+      <button class="tab-btn" data-tab="bookmarks">Bookmarks</button>
+      <button class="tab-btn" data-tab="deadlines">Deadlines</button>
+      <button class="tab-btn" data-tab="tools">Tools</button>
+      <button class="tab-btn" data-tab="settings">Settings</button>
+    </nav>
+
+    <!-- HOME TAB -->
+    <section id="home" class="tab-content active">
+      <h2>Welcome 👋</h2>
+      <p class="subtitle">Your personal AI assistant powered by Groq.</p>
+        <button id="bookmarkBtn" class="bookmark-button">📌 Bookmark This Page</button>
+      <div class="card">
+        <h3>Quick Actions</h3>
+        <ul>
+          <li>⚡ Start chatting instantly</li>
+          <li>📚 Use tools & utilities</li>
+          <li>⚙️ Customize your extension</li>
+        </ul>
+      </div>
+
+      <div class="footer-note">
+        Version 1.0 • Made for you
+      </div>
+    </section>
+
+    <!-- BOOKMARKS TAB -->
+    <section id="bookmarks" class="tab-content">
+        <h2>Your Bookmarks 📚</h2>
+        <p class="subtitle">AI summaries of saved pages</p>
+
+        <div id="bookmarkList" class="bookmark-list"></div>
+    </section>
+
+    <!-- CHAT TAB -->
+    <section id="chat" class="tab-content">
+      <h2>AI Chatbot 🤖</h2>
+      <p class="subtitle">Talk with the Groq LLM</p>
+
+      <div class="chatbox">
+        <button id="summarizeChatBtn" class="action-btn">
+        Summarize WhatsApp Chat
+        </button>
+        <div id="messages"></div>
+      </div>
+      
+      <div class="input-area">
+        <input id="userInput" type="text" placeholder="Type your message...">
+        <button id="sendBtn">➤</button>
+      </div>
+    </section>
+
+    <!--DEADLINES TAB-->
+    <section id="deadlines" class="tab-content">
+      <h2>Deadlines ⏳</h2>
+      <p class="subtitle">Upcoming tasks and due dates extracted from emails</p>
+
+      <div id="deadlineList" class="bookmark-list"></div>
+    </section>
+
+    <!-- TOOLS TAB -->
+    <section id="tools" class="tab-content">
+      <h2>Tools 🧰</h2>
+      <p class="subtitle">More features coming soon...</p>
+    </section>
+
+    <!-- SETTINGS TAB -->
+    <section id="settings" class="tab-content">
+      <h2>Settings ⚙️</h2>
+      <p class="subtitle">Customize your experience</p>
+    </section>
+
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

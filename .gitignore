@@ -1,0 +1,36 @@
+# 🔐 Do NOT upload secrets
+.env
+*.env
+
+# 🐍 Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 🧪 Virtual environments
+venv/
+env/
+.venv/
+
+# ⚙️ Build / logs
+*.log
+
+# 🗂️ macOS and system files
+.DS_Store
+Thumbs.db
+
+# 🚫 IDE files
+.vscode/
+.idea/
+
+# 🛠️ Node_modules (if ever added)
+node_modules/
+
+# 🔥 Chrome extension build caches
+*.crx
+*.pem
+
+# ⚓ Render / Railway deployment build files (auto generated)
+dist/
+build/
