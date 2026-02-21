@@ -42,7 +42,7 @@ function handleBookMarkReuqest(sendResponse) {
 
       // Send to Flask to generate summary
       try {
-        const res = await fetch("http://localhost:5000/bookmark", {
+        const res = await fetch(`${API_BASE}/bookmark`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(pageData)

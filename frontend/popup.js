@@ -1,3 +1,5 @@
+const API_BASE = "https://your-render-url.onrender.com";
+
 // ========== TAB SWITCHING ==========
 document.querySelectorAll(".tab-btn").forEach(btn => {
   btn.addEventListener("click", () => {
@@ -201,7 +203,7 @@ function getRelevantBookmarks(query, bookmarks) {
 
 // Send message to Flask backend
 async function sendToBackend(userText) {
-  const res = await fetch("http://localhost:5000/chat", {
+  const res = await fetch(`${API_BASE}/chat`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ message: userText })
@@ -226,7 +228,7 @@ sendBtn.onclick = async () => {
       lastChatMessages: []
     },
     async ctx => {
-      const res = await fetch("http://localhost:5000/chat", {
+      const res = await fetch(`${API_BASE}chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -296,7 +298,7 @@ summarizeBtn.onclick = () => {
 
         addMessage("Summarizing WhatsApp chat...", "ai");
 
-        const res = await fetch("http://localhost:5000/summarize_chat", {
+        const res = await fetch(`${API_BASE}/summarize_chat`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ messages: response.messages })
