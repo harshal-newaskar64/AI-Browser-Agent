@@ -2,13 +2,27 @@
 
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from services.chatbot import GroqClient
 from memory import ShortTermMemory
 from datetime import datetime
 import json
 import numpy as np
 import os
 from dotenv import load_dotenv
+
+from groq import Groq
+import os
+
+class GroqClient:
+    def __init__(self):
+        self.client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
+
+    def chat(self, messages):
+        response = self.client.chat.completions.create(
+            model="llama-3.3-70b-versatile",
+            messages=messages,
+            temperature=0.5
+        )
+        return response.choices[0].message.content
 
 app = Flask(__name__)
 CORS(app)   # allow Chrome extension to call this backend
