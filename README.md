@@ -31,6 +31,17 @@ One chatbot handles everything:
 
 AI intelligently picks the right context.
 
+### 🔍 Multi-Source Question Answering
+Ask real questions like:
+> “What do I need to do before Friday?”
+
+The AI checks information across:
+- WhatsApp  
+- Emails  
+- Bookmarks  
+
+…and returns a **single, unified answer**.
+
 ---
 
 ## 🛠️ Tech Stack
@@ -42,8 +53,6 @@ AI intelligently picks the right context.
 - **Deployment:** Render / Railway-ready  
 
 ---
-
-## 📁 Project Structure
 
 ## 📁 Project Structure
 
@@ -68,41 +77,71 @@ AI intelligently picks the right context.
 
 ## ⚙️ Setup Instructions
 
-### 1️⃣ Backend
+This project has two parts:
+
+1. **Chrome Extension (Frontend)** – what users install and use directly  
+2. **AI Backend (Flask + Groq)** – optional, only needed if you want to run your own server
+
+---
+
+## 🧩 1️⃣ Chrome Extension (Frontend) — Quick Setup
+
+You only need to download the `extension/` folder to start using the tool.
+
+### ✔️ Steps:
+1. Download or clone this repository.
+2. Open Chrome and go to:  
+   `chrome://extensions/`
+3. Enable **Developer Mode** (top-right corner).
+4. Click **Load Unpacked**.
+5. Select the **frontend/** folder from the repository.
+
+Your extension is now installed and ready to use.
+
+### ⚠️ Note on Backend Startup Time (Render Free Tier)
+
+The backend API is hosted on **Render’s free tier**, which means the server goes to sleep when inactive.  
+When you use the extension after some time, the first request may take **30–60 seconds** while the server wakes up.
+
+After this initial startup, everything works normally and responses are fast.
+
+---
+
+## 🧠 2️⃣ Backend (Optional – Only if running your own AI Server)
+
+If you want to self-host the backend instead of using the deployed API, follow these steps:
+
+### ✔️ Steps:
 ```bash
 cd backend
 pip install -r requirements.txt
 python app.py
 ```
-Environment variables (.env):
 
-GROQ_API_KEY=your_key_here
-2️⃣ Chrome Extension
+## 🏆 Highlights
 
-Go to chrome://extensions/
+- Fast AI summarization via Groq
+- Unified memory across bookmarks, emails, and chats
+- Clean Chrome extension UI
+- Works on real-world content (WhatsApp Web, Gmail, articles)
 
-Enable Developer Mode
 
-Click Load Unpacked
+## 🤖 AI & "Vibe Coding" Disclosure
 
-Select the extension/ folder
+This project embraces AI-assisted development using tools like GitHub Copilot, and LLM-based coding assistant: ChatGPT.  
 
-🌐 Deployment (Render)
+---
 
-Connect GitHub repo
+## 📓 Vibe Log — How AI Helped in This Project
 
-Build command: pip install -r backend/requirements.txt
+- Used AI tools to brainstorm the overall architecture (Chrome Extension + Flask backend + unified memory system).
+- Generated initial scaffolding for `content.js`, `background.js`, and bookmark extraction logic.
+- Assisted in writing complex DOM extraction for WhatsApp chat parsing.
+- Helped shape API request/response patterns for the backend.
+- Co-created summarization prompts and extraction logic for Groq LLM.
+- Assisted with debugging issues in auto-scrolling, asynchronous fetch logic, and message retrieval limits.
+- Helped format and refine the README, deployment steps, and general documentation.
+- Contributed to UI copywriting (summary texts, feature descriptions, user-facing messages).
+- Provided suggestions for project structure, better modularization, and extension performance improvements.
 
-Start command: gunicorn app:app
-
-Add environment variable: GROQ_API_KEY
-
-🏆 Highlights
-
-Fast AI summarization via Groq
-
-Unified memory across bookmarks, emails, and chats
-
-Clean Chrome extension UI
-
-Works on real-world content (WhatsApp Web, Gmail, articles)
+AI tools acted as **accelerators**, but final decisions, debugging, testing, and system integration were all done manually.
