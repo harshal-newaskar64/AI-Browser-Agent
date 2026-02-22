@@ -56,8 +56,6 @@ The AI checks information across:
 
 ## 📁 Project Structure
 
-## 📁 Project Structure
-
 ### **backend/**
 - `app.py` — Flask backend (API routes & LLM logic)
 - `requirements.txt` — Backend Python dependencies
@@ -99,6 +97,13 @@ You only need to download the `extension/` folder to start using the tool.
 5. Select the **frontend/** folder from the repository.
 
 Your extension is now installed and ready to use.
+
+### ⚠️ Note on Backend Startup Time (Render Free Tier)
+
+The backend API is hosted on **Render’s free tier**, which means the server goes to sleep when inactive.  
+When you use the extension after some time, the first request may take **30–60 seconds** while the server wakes up.
+
+After this initial startup, everything works normally and responses are fast.
 
 ---
 
