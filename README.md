@@ -31,6 +31,17 @@ One chatbot handles everything:
 
 AI intelligently picks the right context.
 
+### 🔍 Multi-Source Question Answering
+Ask real questions like:
+> “What do I need to do before Friday?”
+
+The AI checks information across:
+- WhatsApp  
+- Emails  
+- Bookmarks  
+
+…and returns a **single, unified answer**.
+
 ---
 
 ## 🛠️ Tech Stack
