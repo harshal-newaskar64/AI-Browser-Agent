@@ -1,4 +1,4 @@
-const API_BASE = "https://your-render-url.onrender.com";
+const API_BASE = "http://localhost:5000";
 
 // ========== TAB SWITCHING ==========
 document.querySelectorAll(".tab-btn").forEach(btn => {
@@ -228,7 +228,7 @@ sendBtn.onclick = async () => {
       lastChatMessages: []
     },
     async ctx => {
-      const res = await fetch(`${API_BASE}chat`, {
+      const res = await fetch(`${API_BASE}/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

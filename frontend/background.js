@@ -1,5 +1,5 @@
 // background.js
-
+const API_BASE = "http://localhost:5000";
 console.log("🟣 Background service worker loaded");
 
 // Listen for content extraction request from popup.js
