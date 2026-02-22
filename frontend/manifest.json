@@ -1,12 +1,12 @@
 {
   "manifest_version": 3,
 
-  "name": "Groq Chatbot",
+  "name": "AI Browser Assistant",
   "version": "1.0.0",
-  "description": "An AI chatbot powered by a Flask backend and Groq LLM.",
+  "description": "Smart browser assistant that summarizes chats, emails, and pages, extracts tasks, and answers questions using unified AI memory.",
 
   "action": {
-    "default_title": "Groq Chatbot",
+    "default_title": "AI Browser Assistant",
     "default_popup": "popup.html",
     "default_icon": {
       "16": "icon16.png",
