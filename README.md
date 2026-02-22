@@ -22,6 +22,20 @@ A smart browser assistant that summarizes webpages, WhatsApp chats, and emails, 
 - Saves them into a “Deadlines” section  
 - AI can answer questions about your emails  
 
+### 🧠 AI Bookmark LinkFinder (Topic Clustering & Insight Linking)
+
+Save multiple bookmarks and let the AI analyze them **together** to uncover deeper insights.
+
+The AI automatically:
+- Finds relationships between your saved pages  
+- Detects common themes and overlapping topics  
+- Groups similar bookmarks into topic clusters  
+- Highlights contradictions or missing information  
+- Builds a mini “learning path” based on your saved articles  
+- Helps you understand how all your bookmarks connect
+
+This turns your collection of webpages into a **unified knowledge graph**, powered by AI — perfect for research, work, and studying.
+
 ### 🤖 Unified AI Chatbot  
 One chatbot handles everything:
 - Bookmark questions  
