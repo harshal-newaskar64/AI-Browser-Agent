@@ -1,4 +1,4 @@
-const API_BASE = "http://localhost:5000";
+const API_BASE = "https://ai-browser-agent-backend.onrender.com";
 
 // ========== TAB SWITCHING ==========
 document.querySelectorAll(".tab-btn").forEach(btn => {
